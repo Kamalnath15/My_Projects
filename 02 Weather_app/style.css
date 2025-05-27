@@ -1,0 +1,55 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;  
+    background-color: rgb(114, 214, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weather-container {
+    color: white;
+}
+
+.temp {
+    font-size: 50px;
+}
+
+.time_location {
+    font-size: 30px;
+}
+
+.condition {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+nav {
+    height: 50px;
+    margin-left: 50px;
+    margin-top: -45px;
+}
+
+.search_area {
+    padding: 15px 0;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+}
+
+button {
+    margin: 20px 0 0 25px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
