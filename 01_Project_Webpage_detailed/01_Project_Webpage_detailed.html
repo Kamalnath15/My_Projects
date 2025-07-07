@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
             padding: 15px;
             color: white;
         }
+
         .info1 {
             padding-left: 15px;
         }
@@ -25,10 +27,19 @@
         .info1 span {
             padding-right: 40px;
         }
-        
+
         .info2 {
-            padding-left: 300px;
+            padding-left: 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 10px;
         }
+
+
+        /* .info2 {
+            padding-left: 300px;
+        } */
 
         .info2 a {
             color: white;
@@ -47,8 +58,8 @@
         .navlinks {
             padding-top: 27px;
             padding-left: 30px;
-        } 
-        
+        }
+
         .navlinks a {
             padding-right: 40px;
             text-decoration: none;
@@ -62,7 +73,7 @@
         }
 
         #btn1 {
-            background-color:rgb(4, 118, 55);
+            background-color: rgb(4, 118, 55);
             padding: 5px 10px 5px 10px;
             border-radius: 7px;
             color: white;
@@ -76,10 +87,10 @@
             background-size: cover;
             animation: img 20s infinite;
         }
-        
+
         @keyframes img {
             25% {
-             background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg)
+                background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg)
             }
 
             50% {
@@ -95,14 +106,26 @@
             }
         }
 
-        main div{
+        main div {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            margin: auto;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+
+
+        /* main div {
             width: 50%;
             padding-left: 150px;
             padding-top: 20px;
             font-size: large;
             font-family: Arial, Helvetica, sans-serif;
             color: white;
-        }
+        } */
 
         #btn2 {
             background-color: rgb(6, 212, 85);
@@ -120,57 +143,54 @@
 
         .card {
             display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-column-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             text-align: center;
             color: white;
-            height: 220px;
             width: 95%;
             margin: auto;
-        } 
+            padding: 10px;
+        }
 
         .card1 {
             background-color: rgb(19, 132, 100);
             border-radius: 20px;
             padding: 15px;
+            min-height: 200px;
+           
         }
-
-        /* .card2 {
-            background-color: rgb(35, 163, 35);
-            border-radius: 20px;
-        }
-
-        .card3 {
-            background-color: rgb(35, 163, 35);
-            border-radius: 20px;
-        }
-
-        .card4 {
-            background-color: rgb(35, 163, 35);
-            border-radius: 20px;
-        } */
 
         .content3 {
             text-align: center;
-            font-size: larger;
             color: rgb(127, 127, 127);
             width: 95%;
             margin: auto;
+            padding: 20px;
+            font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content3 {
+                font-size: 1rem;
+            }
         }
 
         .content4 {
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-column-gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
             text-align: center;
+            padding: 10px;
         }
-         .card2 {
+        .card2 {
             box-shadow: 10px;
-         }
-        .card2 h4{
+        }
+
+        .card2 h4 {
+            width: 100%;
+            max-width: 320px;
             font-size: large;
             color: rgb(127, 127, 127);
-            width: 250px;
             margin: auto;
         }
 
@@ -178,12 +198,13 @@
             background-color: rgba(4, 135, 89, 0.71);
             padding: 15px;
             color: antiquewhite;
-            font-size:x-large;
-            
+            font-size: x-large;
+
         }
 
         .card2 p {
-            width: 320px;
+            width: 100%;
+            max-width: 320px;
             margin: auto;
             font-size: larger;
             color: rgb(127, 127, 127);
@@ -197,9 +218,9 @@
 
         .content5 {
             display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             background-color: rgb(183, 181, 181);
-            padding: 20px;
         }
 
         .c-four i {
@@ -208,13 +229,38 @@
             color: black;
             border-radius: 5px;
         }
-        
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .navlinks {
+                padding: 10px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navlinks a {
+                padding: 10px;
+            }
+
+            #btn1 {
+                margin-top: 10px;
+            }
+        }
     </style>
 
     <script src="https://kit.fontawesome.com/073f66530f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <marquee behavior="" direction="rtl">Our best offer Ever!! Summer Special - Get 3 Courses at 22499/- only. <a href="">Read more</a></marquee>    
+    <marquee behavior="" direction="rtl">Our best offer Ever!! Summer Special - Get 3 Courses at 22499/- only. <a
+            href="">Read more</a></marquee>
     <div class="info">
         <div class="info1">
             <span>Email: rjtechnology@gmail.com</span>
@@ -243,38 +289,47 @@
             <h1>RJ Technologies</h1>
             <h4>Best Online & Classroom Training Institute</h4>
             <br><br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, omnis cupiditate molestiae optio illo quas culpa quis non expedita laboriosam tenetur ad magni architecto? Delectus aperiam labore itaque nesciunt, facilis illum! Nemo minus consectetur, praesentium culpa ratione doloribus inventore velit?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, omnis cupiditate molestiae optio illo
+                quas culpa quis non expedita laboriosam tenetur ad magni architecto? Delectus aperiam labore itaque
+                nesciunt, facilis illum! Nemo minus consectetur, praesentium culpa ratione doloribus inventore velit?
+            </p>
             <br><br>
             <button id="btn2">Apply Online</button>
         </div>
     </main>
     <div class="content2">
         <h1>Key Features</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum delectus cumque quia repellendus autem. Magnam incidunt rerum tenetur esse amet optio sed delectus voluptates ipsa!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum delectus cumque quia repellendus autem.
+            Magnam incidunt rerum tenetur esse amet optio sed delectus voluptates ipsa!</p>
     </div>
     <br><br>
     <div class="card">
         <div class="card1">
             <h4>Expert Faculty</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores
+                quos.</p>
         </div>
         <div class="card1">
             <h4>Well Equiped Labs </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores
+                quos.</p>
         </div>
         <div class="card1">
             <h4>Quality Education </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores
+                quos.</p>
         </div>
         <div class="card1">
             <h4> 24 * 7 Access</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate possimus saepe earum dolores
+                quos.</p>
         </div>
     </div>
     <br><br>
     <div class="content3">
         <h1>Our Courses</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut modi saepe eum dolorum repudiandae rem odit, quam ex rerum dignissimos debitis alias et sunt tenetur aperiam porro quidem velit consequatur??</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut modi saepe eum dolorum repudiandae rem odit,
+            quam ex rerum dignissimos debitis alias et sunt tenetur aperiam porro quidem velit consequatur??</p>
     </div>
     <br><br>
     <div class="content4">
@@ -282,9 +337,11 @@
             <h3>Full Stack Development</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
             <br><br>
@@ -293,9 +350,11 @@
             <h3>Front End Development</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
             <br><br>
@@ -304,9 +363,11 @@
             <h3>Backend Development</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
             <br><br>
@@ -316,9 +377,11 @@
             <h3> Data Science</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
             <br><br>
@@ -328,9 +391,11 @@
             <h3> AWS</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
             <br><br>
@@ -340,18 +405,22 @@
             <h3> Devops</h3>
             <h4>Cras ultricies lacus consectetur, consectetur</h4>
             <br>
-            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i><i
+                class="fa-solid fa-star" style="color: gold;"></i><i class="fa-solid fa-star" style="color: gold;"></i>
             <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam ipsa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at deleniti tenetur ratione totam
+                ipsa.</p>
             <br><br>
             <button>Apply Online</button>
-            <br><br><br><br><br>    
+            <br><br><br><br><br>
         </div>
     </div>
     <div class="content5">
         <div class="c-one">
             <h4><i class="fa-solid fa-graduation-cap"></i>RJ Technology</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsa. Veniam neque, voluptatibus quo sint illo quod rerum doloremque autem hic velit nihil, magnam sunt maiores molestiae. Asperiores iste earum laudantium nam, porro ex quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsa. Veniam neque, voluptatibus quo sint
+                illo quod rerum doloremque autem hic velit nihil, magnam sunt maiores molestiae. Asperiores iste earum
+                laudantium nam, porro ex quod.</p>
         </div>
         <div class="c-two">
             <h4 style="padding-left: 35px;">Our Services</h4>
@@ -373,7 +442,7 @@
                 Email: rjtechnology@gmail.com
             </p>
             <p><b>Office time: </b>10:00AM - 6:00PM</p>
-        </div>  
+        </div>
         <div class="c-four">
             <h4>Subscribe Us</h4>
             <input type="text" name="" id="" placeholder="raghavendra6c@gmail.com">
@@ -388,4 +457,5 @@
 
 
 </body>
+
 </html>
